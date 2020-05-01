@@ -11,12 +11,16 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-
 steps:
 
 - name: 'hashicorp/terraform:0.11.14'
   entrypoint: 'sh'
+  env:
+  
+    - 'SDLC_ENVIRONMENT=${_SDLC_ENVIRONMENT}'
+    - 'BRANCH=${_BRANCH}'
+    - 'ACTION=${_ACTION}'
+    - 'COMPONENTS=${_COMPONENTS}'
   args: 
   - '-c'
   - |
@@ -26,5 +30,5 @@ steps:
           ACTION=${_ACTION}
           COMPONENTS=${_COMPONENTS}
         EOF_env_vars
-      
-      sudo sh gcp/scripts/main.sh ${_SDLC_ENVIRONMENT} ${_BRANCH} ${_ACTION} ${_COMPONENTS}
+
+      sudo sh gcp/scripts/main.sh ${SDLC_ENVIRONMENT} ${BRANCH} ${ACTION} ${COMPONENTS}
