@@ -18,4 +18,5 @@ steps:
   args:
   - '-c'
   - |
+    echo $$SDLC_ENVIRONMENT
     sh gcp/scripts/main.sh $$SDLC_ENVIRONMENT $$BRANCH $$ACTION $$COMPONENTS
