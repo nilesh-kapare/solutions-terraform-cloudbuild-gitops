@@ -15,12 +15,6 @@ steps:
 
 - name: 'hashicorp/terraform:0.11.14'
   entrypoint: 'sh'
-  env:
-  
-    - 'SDLC_ENVIRONMENT=${_SDLC_ENVIRONMENT}'
-    - 'BRANCH=${_BRANCH}'
-    - 'ACTION=${_ACTION}'
-    - 'COMPONENTS=${_COMPONENTS}'
   args: 
   - '-c'
   - |
