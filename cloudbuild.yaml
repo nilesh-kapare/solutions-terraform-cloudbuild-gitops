@@ -17,7 +17,7 @@ steps:
 - name: 'hashicorp/terraform:0.11.14'
   args: ['sh', '. gcp/scripts/main.sh']
   env:
-  - 'SDLC_ENVIRONMENT=${SDLC_ENVIRONMENT}'
+  - 'SDLC_ENVIRONMENT=${_SDLC_ENVIRONMENT}'
   - 'BRANCH=${_BRANCH}'
   - 'ACTION=${_ACTION}'
   - 'COMPONENTS=${_COMPONENTS}'
