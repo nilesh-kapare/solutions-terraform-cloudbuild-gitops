@@ -18,4 +18,4 @@ steps:
   args:
   - '-c'
   - |
-    sudo sh gcp/scripts/main.sh $$SDLC_ENVIRONMENT $$BRANCH $$ACTION $$COMPONENTS
+    sh gcp/scripts/main.sh $$SDLC_ENVIRONMENT $$BRANCH $$ACTION $$COMPONENTS
