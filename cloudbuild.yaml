@@ -24,4 +24,10 @@ steps:
           ACTION=${_ACTION}
           COMPONENTS=${_COMPONENTS}
         EOF_env_vars
+
       sudo sh gcp/scripts/main.sh ${SDLC_ENVIRONMENT} ${BRANCH} ${ACTION} ${COMPONENTS}
+  env:
+  - 'SDLC_ENVIRONMENT=${_SDLC_ENVIRONMENT}'
+  - 'BRANCH=${_BRANCH}'
+  - 'ACTION=${_ACTION}'
+  - 'COMPONENTS=${_COMPONENTS}'
