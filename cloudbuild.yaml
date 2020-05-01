@@ -26,5 +26,5 @@ steps:
           ACTION=${_ACTION}
           COMPONENTS=${_COMPONENTS}
         EOF_env_vars
-
+# Deployment of terraform
       sudo sh gcp/scripts/main.sh ${_SDLC_ENVIRONMENT} ${_BRANCH} ${_ACTION} ${_COMPONENTS}
