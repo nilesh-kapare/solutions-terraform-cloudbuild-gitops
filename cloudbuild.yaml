@@ -16,6 +16,6 @@ steps:
 - name: 'hashicorp/terraform:0.11.14'
   entrypoint: 'sh'
   args:
-  - 'c'
+  - '-c'
   - |
     sudo sh gcp/scripts/main.sh $$SDLC_ENVIRONMENT $$BRANCH $$ACTION $$COMPONENTS
