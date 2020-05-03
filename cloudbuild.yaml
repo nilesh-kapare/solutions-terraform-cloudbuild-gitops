@@ -15,6 +15,16 @@
     #sh gcp/scripts/main.sh $$SDLC_ENVIRONMENT $$BRANCH $$ACTION $$COMPONENTS
 steps:
 
+# Uses the ubuntu build step:
+# to run a shell script; and
+# set env variables for its execution
+- name: 'ubuntu'
+  args: ['bash', './myscript.sh']
+  env:
+  - 'BUILD=$BUILD_ID'
+  - 'PROJECT=$PROJECT_ID'
+  - 'REV=$REVISION_ID'
+  
 - name: 'hashicorp/terraform:0.11.14'
   entrypoint: 'sh'
   args:
