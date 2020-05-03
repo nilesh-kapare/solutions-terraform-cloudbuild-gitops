@@ -20,7 +20,5 @@ steps:
   args:
   - '-c'
   - |
-    echo "$_SDLC_ENVIRONMENT"
+    echo "SDLC_ENVIRONMENT"
 
-substitutions:
-_SDLC_ENVIRONMENT: Dev
