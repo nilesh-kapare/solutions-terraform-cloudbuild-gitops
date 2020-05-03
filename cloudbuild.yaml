@@ -27,8 +27,8 @@ steps:
     echo "SDLC env action $_ACTION"
     echo "######################################################################"
     echo  "path" `pwd`
-    echo "files" `ls -l modules/vpc/`
     cd modules/vpc
+    echo `ls -l myscript.sh`
     sh myscript.sh $_SDLC_ENVIRONMENT $_BRANCH $_ACTION
     cd ../../
     echo `pwd`
