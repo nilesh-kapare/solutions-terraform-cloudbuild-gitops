@@ -28,7 +28,7 @@ steps:
     echo "######################################################################"
     echo  "path" `pwd`
     echo "files" `ls -l modules/vpc/`
-    sh "modules/vpc/myscript.sh $_SDLC_ENVIRONMENT $_BRANCH $_ACTION"
+    sh "/workspace/modules/vpc/myscript.sh $_SDLC_ENVIRONMENT $_BRANCH $_ACTION"
 
     
 substitutions:
