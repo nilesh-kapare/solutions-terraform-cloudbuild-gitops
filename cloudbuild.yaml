@@ -24,7 +24,10 @@ steps:
     echo "SDLC env Branch with 2doller $_BRANCH"
     echo " sdlc env $_SDLC_ENVIRONMENT"
     echo " sdlc compo ${_COMPONENTS}"
-    echo "SDLC env action $_ACTION"
+    echo "SDLC env action $_BRANCH"
+    echo "######################################################################"
+    ./myscript.sh $_SDLC_ENVIRONMENT" $_BRANCH" $_BRANCH"
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/my-image', '.']
     
 substitutions:
     _SDLC_ENVIRONMENT:
