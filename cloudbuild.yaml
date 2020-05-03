@@ -21,4 +21,5 @@ steps:
   - '-c'
   - |
     echo "SDLC_ENVIRONMENT"
+    echo "$BUILD_ID"
 
