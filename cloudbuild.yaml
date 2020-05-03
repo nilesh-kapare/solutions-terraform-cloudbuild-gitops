@@ -13,17 +13,7 @@
 # limitations under the License.
 
     #sh gcp/scripts/main.sh $$SDLC_ENVIRONMENT $$BRANCH $$ACTION $$COMPONENTS
-steps:
 
-# Uses the ubuntu build step:
-# to run a shell script; and
-# set env variables for its execution
-- name: 'ubuntu'
-  args: ['bash', './myscript.sh']
-  env:
-  - 'BUILD=$BUILD_ID'
-  - 'PROJECT=$PROJECT_ID'
-  - 'REV=$REVISION_ID'
   
 - name: 'hashicorp/terraform:0.11.14'
   entrypoint: 'sh'
@@ -32,12 +22,16 @@ steps:
   - |
     echo "SDLC_ENVIRONMENT"
     echo  "Build ID - $BUILD_ID"
-    echo "SDLC env with 2doller $$_SDLC_ENVIRONMENT"
-    echo " sdlc with 1 doller $_SDLC_ENVIRONMENT"
-    echo " sdlc with doller curlyy brace ${_SDLC_ENVIRONMENT}"
+    echo "SDLC env Branch with 2doller $_BRANCH"
+    echo " sdlc env $_SDLC_ENVIRONMENT"
+    echo " sdlc compo ${_COMPONENTS}"
+    echo "SDLC env action $_ACTION"
     
 substitutions:
     _SDLC_ENVIRONMENT: dev
+    _BRANCH: devops
+    _ACTION: create
+    _COMPONENTS: vpc
 
 
 
