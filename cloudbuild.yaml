@@ -11,6 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+    #sh gcp/scripts/main.sh $$SDLC_ENVIRONMENT $$BRANCH $$ACTION $$COMPONENTS
 steps:
 
 - name: 'hashicorp/terraform:0.11.14'
@@ -18,8 +20,8 @@ steps:
   args:
   - '-c'
   - |
-    echo "$_SDLC_ENVIRONMENT"
-    #sh gcp/scripts/main.sh $$SDLC_ENVIRONMENT $$BRANCH $$ACTION $$COMPONENTS
+    echo "$SDLC_ENVIRONMENT"
+
  
  substitutions:
- _SDLC_ENVIRONMENT: $_SDLC_ENVIRONMENT
+ _SDLC_ENVIRONMENT: Dev
