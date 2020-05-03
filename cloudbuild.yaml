@@ -18,5 +18,8 @@ steps:
   args:
   - '-c'
   - |
-    echo $$SDLC_ENVIRONMENT
-    sh gcp/scripts/main.sh $$SDLC_ENVIRONMENT $$BRANCH $$ACTION $$COMPONENTS
+    echo "$_SDLC_ENVIRONMENT"
+    #sh gcp/scripts/main.sh $$SDLC_ENVIRONMENT $$BRANCH $$ACTION $$COMPONENTS
+ 
+ substitutions:
+ _SDLC_ENVIRONMENT: $SDLC_ENVIRONMENT
