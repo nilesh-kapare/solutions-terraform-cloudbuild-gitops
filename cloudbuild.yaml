@@ -25,4 +25,9 @@ steps:
     echo "SDLC env with 2doller $$_SDLC_ENVIRONMENT"
     echo " sdlc with 1 doller $_SDLC_ENVIRONMENT"
     echo " sdlc with doller curlyy brace ${_SDLC_ENVIRONMENT}"
+    
+substitutions:
+    _SDLC_ENVIRONMENT: dev
+
+
 
