@@ -26,7 +26,7 @@ steps:
     echo " sdlc compo ${_COMPONENTS}"
     echo "SDLC env action $_ACTION"
     echo "######################################################################"
-    GCP_PATH=modules/vpc/
+    
     sh ${GCP_PATH}myscript.sh $_SDLC_ENVIRONMENT $_BRANCH $_ACTION
 
     
@@ -35,6 +35,7 @@ substitutions:
     _BRANCH:
     _ACTION: create
     _COMPONENTS:
+    _GCP_PATH: modules/vpc/
 
 
 
