@@ -28,7 +28,7 @@ steps:
     
 substitutions:
     _SDLC_ENVIRONMENT: dev
-    _BRANCH: devops
+    _BRANCH:
     _ACTION: create
     _COMPONENTS: vpc
 
