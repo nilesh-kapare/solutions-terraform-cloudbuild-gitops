@@ -26,7 +26,7 @@ steps:
     echo " sdlc compo ${_COMPONENTS}"
     echo "SDLC env action $_ACTION"
     echo "######################################################################"
-    
+    echo  "path" `pwd`
     sh "modules/vpc/myscript.sh $_SDLC_ENVIRONMENT $_BRANCH $_ACTION"
 
     
