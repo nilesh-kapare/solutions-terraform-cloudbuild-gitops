@@ -24,9 +24,9 @@ steps:
     echo "SDLC env Branch with 2doller $_BRANCH"
     echo " sdlc env $_SDLC_ENVIRONMENT"
     echo " sdlc compo ${_COMPONENTS}"
-    echo "SDLC env action $_BRANCH"
+    echo "SDLC env action $_ACTION"
     echo "######################################################################"
-    sh myscript.sh $_SDLC_ENVIRONMENT $_BRANCH $_BRANCH
+    sh myscript.sh $_SDLC_ENVIRONMENT $_BRANCH $_ACTION
 
     
 substitutions:
