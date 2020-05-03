@@ -15,7 +15,7 @@
     #sh gcp/scripts/main.sh $$SDLC_ENVIRONMENT $$BRANCH $$ACTION $$COMPONENTS
 steps: 
 - name: 'hashicorp/terraform:0.11.14'
-  entrypoint: 'bash'
+  entrypoint: 'sh'
   args:
   - '-c'
   - |
@@ -27,7 +27,7 @@ steps:
     echo "SDLC env action $_ACTION"
     echo "######################################################################"
     
-    bash modules/vpc/myscript.sh $_SDLC_ENVIRONMENT $_BRANCH $_ACTION
+    sh modules/vpc/myscript.sh $_SDLC_ENVIRONMENT $_BRANCH $_ACTION
 
     
 substitutions:
