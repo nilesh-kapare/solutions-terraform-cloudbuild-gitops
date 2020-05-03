@@ -22,6 +22,5 @@ steps:
   - |
     echo "$_SDLC_ENVIRONMENT"
 
- 
- substitutions:
- _SDLC_ENVIRONMENT: Dev
+substitutions:
+_SDLC_ENVIRONMENT: Dev
