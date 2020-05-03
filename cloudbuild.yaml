@@ -29,7 +29,7 @@ steps:
 substitutions:
     _SDLC_ENVIRONMENT:
     _BRANCH:
-    _ACTION:
+    _ACTION: create
     _COMPONENTS:
 
 
