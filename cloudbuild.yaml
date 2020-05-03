@@ -27,10 +27,10 @@ steps:
     echo "SDLC env action $_ACTION"
     
 substitutions:
-    _SDLC_ENVIRONMENT: dev
+    _SDLC_ENVIRONMENT:
     _BRANCH:
-    _ACTION: create
-    _COMPONENTS: vpc
+    _ACTION:
+    _COMPONENTS:
 
 
 
