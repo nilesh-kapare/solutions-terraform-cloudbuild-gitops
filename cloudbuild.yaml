@@ -21,5 +21,8 @@ steps:
   - '-c'
   - |
     echo "SDLC_ENVIRONMENT"
-    echo "$BUILD_ID"
+    echo  "Build ID - $BUILD_ID"
+    echo "SDLC env with 2doller $$_SDLC_ENVIRONMENT"
+    echo " sdlc with 1 doller $_SDLC_ENVIRONMENT"
+    echo " sdlc with doller curlyy brace ${_SDLC_ENVIRONMENT}"
 
