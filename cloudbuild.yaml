@@ -20,7 +20,7 @@ steps:
   args:
   - '-c'
   - |
-    echo "$SDLC_ENVIRONMENT"
+    echo "$_SDLC_ENVIRONMENT"
 
  
  substitutions:
